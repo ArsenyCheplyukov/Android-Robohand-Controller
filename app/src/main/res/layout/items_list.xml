@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="225dp"
+    android:layout_height="80dp"
+    android:layout_margin="8dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/action_item_name_title"
+            android:layout_width="62dp"
+            android:layout_height="wrap_content"
+            android:text="@string/action_name_title"
+            android:textColor="#222222"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/action_item_name"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/action_item_name_title"
+            android:layout_toRightOf="@+id/action_item_name_title"
+            android:textColor="#222222"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/edit_button"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:drawableTop="@drawable/edit" />
+
+        <Button
+            android:id="@+id/loop_button"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toEndOf="@+id/edit_button"
+            android:layout_toRightOf="@+id/edit_button"
+            android:drawableTop="@drawable/loop" />
+
+        <Button
+            android:id="@+id/apply_button"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toEndOf="@+id/loop_button"
+            android:layout_toRightOf="@+id/loop_button"
+            android:drawableTop="@drawable/apply" />
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="10dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toEndOf="@+id/apply_button"
+            android:layout_toRightOf="@+id/apply_button"
+            android:drawableTop="@drawable/delete" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

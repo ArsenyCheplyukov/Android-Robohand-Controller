@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2F2F2F"
+    android:visibility="visible"
+    android:scaleType="matrix"
+    tools:context=".MainActivity">
+
+    <!--BUTTONS FOR CHOOSING TYPE OF PLACEMENT ROBOHAND LEVERS-->
+
+    <ImageView
+        android:id="@+id/viewImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="matrix"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <RadioGroup
+        android:id="@+id/type"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:checkedButton="@+id/offer"
+        android:orientation="horizontal"
+        android:translationX="5dp"
+        android:translationY="5dp"
+        android:background="@drawable/pink_out_line"
+        tools:layout_editor_absoluteX="5dp"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/triangle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@drawable/toggle_widget_background"
+            android:button="@null"
+            android:checked="true"
+            android:drawableBottom="@drawable/robohandtrapezoid"
+            android:state_checked="true"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/trapezoid"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@drawable/toggle_widget_background"
+            android:button="@null"
+            android:drawableBottom="@drawable/robohandtriangle"
+            android:paddingBottom="7dp" />
+    </RadioGroup>
+
+    <!--CHOOSING CONTROL TYPE: CONTROLLER, VOICE, ROTATION-->
+    <RadioGroup
+        android:id="@+id/control"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:checkedButton="@+id/offer"
+        android:orientation="horizontal"
+        android:translationX="110dp"
+        android:translationY="5dp"
+        android:background="@drawable/pink_out_line"
+        tools:layout_editor_absoluteX="10dp"
+        tools:ignore="MissingConstraints">
+
+        <RadioButton
+            android:id="@+id/keys"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="@drawable/toggle_widget_background"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/controller"
+            android:gravity="center"
+            android:scaleType="fitCenter" />
+
+        <RadioButton
+            android:id="@+id/voice"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/toggle_widget_background"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:button="@null"
+            android:drawableBottom="@drawable/voicecommands"
+            android:paddingBottom="5dp"
+            android:gravity="center"
+            android:scaleType="fitCenter" />
+
+        <RadioButton
+            android:id="@+id/axis"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/toggle_widget_background"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:button="@null"
+            android:drawableRight="@drawable/position"
+            android:gravity="center"
+            android:scaleType="fitCenter" />
+    </RadioGroup>
+
+
+    <!--BUTTONS TO CONTROL STRAIGHT MOTIONS OF ROBOTIC HAND-->
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginLeft="54dp"
+        android:layout_marginTop="75dp"
+        android:text="@string/forward"
+        android:textSize="10dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="110dp"
+        android:text="@string/left1"
+        android:textSize="10dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="145dp"
+        android:text="@string/backward"
+        android:textSize="10dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="110dp"
+        android:text="@string/right1"
+        android:textSize="10dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="210dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="90dp"
+        android:text="@string/up"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="210dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="130dp"
+        android:text="@string/down"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="310dp"
+        android:layout_marginLeft="310dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/decreasing"
+        android:textSize="10dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="420dp"
+        android:layout_marginLeft="420dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/increasing"
+        android:textSize="10dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="65dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="310dp"
+        android:layout_marginLeft="310dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/left"
+        android:textSize="10dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="65dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="380dp"
+        android:layout_marginLeft="380dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/right"
+        android:textSize="10dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--DEFINE SEEK BAR THAT CONTROLS STEP OF SOME MOTION-->
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="250dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="35dp"
+        android:max="100"
+        android:progress="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+    <!--SOME TEXT VIEWS THAT USED ONLY FOR DESCRIBING KEYS MEANING-->
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="320dp"
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/text1"
+        android:textSize="14dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="315dp"
+        android:layout_marginLeft="315dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/text2"
+        android:textSize="14dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/text3"
+        android:textSize="12dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="102dp"
+        android:layout_height="20dp"
+        android:text="@string/step"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="59dp" />
+
+    <TextView
+        android:id="@+id/stepText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:text="1"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        tools:ignore="MissingConstraints" />
+
+    <!--MOTIONS DATABASE TEXT AND MENUS TO ENTER DATA-->
+    <TextView
+        android:id="@+id/delay_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delay: "
+        android:textSize="14sp"
+        android:layout_marginRight="230dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Enter_delay"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter delay in ms"
+        android:textSize="10sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="0dp" />
+
+    <TextView
+        android:id="@+id/X_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X: "
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/Enter_delay"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="250dp" />
+
+    <EditText
+        android:id="@+id/Enter_X"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter x in mm"
+        android:textSize="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/Enter_delay"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="180dp"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/Y_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Y: "
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/Enter_delay"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="165dp"/>
+
+    <EditText
+        android:id="@+id/Enter_Y"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter y in mm"
+        android:textSize="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/Enter_delay"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="90dp"/>
+
+
+    <TextView
+        android:id="@+id/Z_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Z: "
+        android:textSize="14dp"
+        app:layout_constraintTop_toBottomOf="@+id/Enter_delay"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="75dp"/>
+
+    <EditText
+        android:id="@+id/Enter_Z"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter z in mm"
+        android:textSize="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/Enter_delay"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="0dp"/>
+
+    <TextView
+        android:id="@+id/rot_angle_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="190dp"
+        android:layout_marginRight="190dp"
+        android:text="Rot: "
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Enter_X" />
+    <EditText
+        android:id="@+id/Enter_rot_angle"
+        android:layout_width="75dp"
+        android:layout_height="34dp"
+        android:hint="Enter rot angle"
+        android:textSize="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/rot_angle_title"
+        app:layout_constraintTop_toBottomOf="@+id/Enter_X" />
+
+    <TextView
+        android:id="@+id/grip_angle_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grip: "
+        android:textSize="14dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toEndOf="@+id/Enter_rot_angle"
+        app:layout_constraintTop_toBottomOf="@+id/Enter_X"
+        android:layout_marginRight="185dp"/>
+    <EditText
+        android:id="@+id/Enter_grip_angle"
+        android:layout_width="80dp"
+        android:layout_height="34dp"
+        android:hint="Enter grip angle"
+        android:textSize="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/grip_angle_title"
+        app:layout_constraintTop_toBottomOf="@+id/Enter_X" />
+
+    <Button
+        android:id="@+id/idBtnAdd"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="280dp"
+        android:layout_marginTop="30dp"
+        android:text="Add"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/idBtnFill"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="Fill"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="280dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_below="@id/Enter_rot_angle"
+        android:layout_marginTop="120dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="540dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/listview"
+        android:layout_marginTop="250dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/add_action"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:text="Add"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/stop_action"
+        app:layout_constraintStart_toEndOf="@+id/Enter_action_name" />
+
+    <Button
+        android:id="@+id/stop_action"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="185dp"
+        android:text="Stop"
+        android:textSize="10dp"
+        app:layout_constraintStart_toEndOf="@+id/Enter_action_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Enter_action_name"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="170dp"
+        android:layout_marginLeft="260dp"
+        android:hint="Enter action name"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

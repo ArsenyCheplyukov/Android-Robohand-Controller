@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">DragonMaster</string>
+    <string name="text3">Regulating end point coordinate:</string>
+    <string name="right">Right</string>
+    <string name="left">Left</string>
+    <string name="increasing">Increasing</string>
+    <string name="decreasing">Decreasing</string>
+    <string name="text2">Hand grab regulation:</string>
+    <string name="text1">Rotate lower base:</string>
+    <string name="down">Down</string>
+    <string name="up">Up</string>
+    <string name="right1">Right</string>
+    <string name="backward">Backward</string>
+    <string name="left1">Left</string>
+    <string name="forward">Forward</string>
+    <string name="search">Search</string>
+    <string name="step">Current Step is:</string>
+    <string name="step_data" />
+    <string name="action_name_title">Name:</string>
+    <string name="action_loop_button_text">Edit</string>
+    <string name="action_delay_title">Delay:</string>
+
+    <string name="value_format">%1$.2f</string>
+</resources>
